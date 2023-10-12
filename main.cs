@@ -10,13 +10,17 @@ public partial class main : Node2D
 {
 	[Export]
 	public Rect2 Bounds = new Rect2(50, 50, 500, 500);
+	
+	[Export]
 	public float ParticleRadius = 5.0f;
+	
+	[Export]
 	public float CollisionDampening = 0.1f;
 	
 	// an array of positions for the particles
 	
-	public List<Godot.Vector2> Positions = new List<Godot.Vector2>();
-	public List<Godot.Vector2> Velocities = new List<Godot.Vector2>();
+	private List<Godot.Vector2> Positions = new List<Godot.Vector2>();
+	private List<Godot.Vector2> Velocities = new List<Godot.Vector2>();
 	
 	private float _gravity = 98f;
 	private Vector2 _halfBoundsSize = Vector2.Zero;
